@@ -1,0 +1,12 @@
+let raceNumber = Math.floor(Math.random()*1000);
+let regisEarly =  false;
+let runnerAge = 87;
+
+//Later comers registration number is Higher
+(regisEarly == false) ? (raceNumber += 1000) : console.log("Congrats, you registred early"); 
+
+//race time based on age and registration time
+(regisEarly==true)&&(runnerAge>18) ? console.log(`Number ${raceNumber}, Be ready to race at 9:30 AM`) 
+	: (regisEarly==true)|| (runnerAge>18) ? console.log(`Number ${raceNumber}, Be ready to race at 11 AM`) 
+	: (regisEarly==false)&&(runnerAge<18) ? console.log(`Number ${raceNumber}, Be ready to race at 12:30 PM`) 
+	: console.log("Please see the registration desk");
